@@ -10,3 +10,31 @@ function filterEvenNumbers(numbers: number[]): number[] {
   return text.split("").reverse().join("");
 }
   reverseString("typescript");
+
+
+ //------------ Problem 3:-----------//
+  type StringOrNumber = string | number;
+
+function checkType(value: StringOrNumber): string {
+  if (typeof value === "string") {
+    return "String";
+  }
+
+  return "Number";
+}
+
+checkType("343");
+
+
+ //------------ Problem 4:-----------//
+
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const user = {
+  id: 1,
+  name: "John Doe",
+  age: 21,
+};
+    getProperty(user, "name");
