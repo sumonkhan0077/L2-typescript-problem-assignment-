@@ -28,7 +28,7 @@ interface User {
 - Login system → email, password
 - API response → password বাদ দিতে হবে
 
-## Naive way (bad practice)**
+## Naive way (bad practice)
 ```markdown
 interface PublicUser {
   id: number;
@@ -80,7 +80,7 @@ type SafeUser = Omit<User, "password">;
 - Security-related cases এ খুব useful
 - Clean এবং minimal code
 
-# Real-world Example (API Design)
+## Real-world Example (API Design)
 **Backend response safe করা:**
 ```markdown
 type UserResponse = Omit<User, "password">;
